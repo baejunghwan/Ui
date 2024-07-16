@@ -68,7 +68,7 @@
 					<div class="search-container me-4 d-xl-block d-lg-none">
 
 						<!-- Search input group start -->
-						<input type="text" class="form-control" placeholder="Search" />
+						<input type="text" class="form-control" placeholder="검색" />
 						<!-- Search input group end -->
 
 					</div>
@@ -173,7 +173,7 @@
 										<span class="menu-text">Widgets</span>
 									</a>
 								</li>
-								<li class="sidebar-dropdown active">
+								<li class="sidebar-dropdown">
 									<a href="#">
 										<i class="bi bi-globe"></i>
 										<span class="menu-text">UI Kit</span>
@@ -195,21 +195,21 @@
 											</li>
 											<li>
 												<a href="cards.html">Cards</a>
-											</li>
-											<li>
+											</li> 
+											<li> 
 												<a href="advanced-cards.html">Advanced Cards</a>
-											</li>
-											<li>
+											</li> 
+											<li> 
 												<a href="carousel.html">Carousel</a>
-											</li>
-											<li>
+											</li> 
+											<li> 
 												<a href="dropdowns.html">Dropdowns</a>
 											</li>
 											<li>
 												<a href="icons.html">Icons</a>
 											</li>
 											<li>
-												<a href="list-items.html" class="current-page">List Items</a>
+												<a href="list-items.html">List Items</a>
 											</li>
 											<li>
 												<a href="modals.html">Modals</a>
@@ -276,32 +276,7 @@
 										</ul>
 									</div>
 								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-calendar4"></i>
-										<span class="menu-text">Calendars</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="calendar.html">Daygrid</a>
-											</li>
-											<li>
-												<a href="calendar-draggable.html">External Draggable</a>
-											</li>
-											<li>
-												<a href="calendar-google.html">Google Calendar</a>
-											</li>
-											<li>
-												<a href="calendar-list-view.html">List View</a>
-											</li>
-											<li>
-												<a href="calendar-selectable.html">Selectable</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="sidebar-dropdown">
+								<li class="sidebar-dropdown active">
 									<a href="#">
 										<i class="bi bi-columns-gap"></i>
 										<span class="menu-text">Forms</span>
@@ -309,7 +284,7 @@
 									<div class="sidebar-submenu">
 										<ul>
 											<li>
-												<a href="form-inputs.html">Form Inputs</a>
+												<a href="form-inputs.html" class="current-page">Form Inputs</a>
 											</li>
 											<li>
 												<a href="form-checkbox-radio.html">Checkbox &amp; Radio</a>
@@ -446,10 +421,10 @@
 					<div class="main-header d-flex align-items-center justify-content-between position-relative">
 						<div class="d-flex align-items-center justify-content-center">
 							<div class="page-icon">
-								<i class="bi bi-collection"></i>
+								<i class="bi bi-columns-gap"></i>
 							</div>
 							<div class="page-title d-none d-md-block">
-								<h5>List Items</h5>
+								<h5>Form Inputs</h5>
 							</div>
 						</div>
 						<!-- Live updates start -->
@@ -479,223 +454,395 @@
 
 					<!-- Content wrapper start -->
 					<div class="content-wrapper">
+
 						<!-- Row start -->
-						<div class="row justify-content-center">
-							<div class="col-xl-10 col-lg-12">
-								<div class="card light">
+						<div class="row gx-3">
+							<div class="col-sm-4 col-12">
+								<div class="card">
 									<div class="card-body">
-										<!-- Row start -->
-										<div class="row gx-3">
-											<div class="col-sm-6">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox" />
-																<label class="form-check-label" for="firstCheckbox">First checkbox</label>
-															</li>
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="checkbox" value="" id="secondCheckbox" />
-																<label class="form-check-label" for="secondCheckbox">Second checkbox</label>
-															</li>
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="checkbox" value="" id="thirdCheckbox" />
-																<label class="form-check-label" for="thirdCheckbox">Third checkbox</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-6">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
-																	id="firstRadio" checked />
-																<label class="form-check-label" for="firstRadio">First radio</label>
-															</li>
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
-																	id="secondRadio" />
-																<label class="form-check-label" for="secondRadio">Second radio</label>
-															</li>
-															<li class="list-group-item">
-																<input class="form-check-input me-1" type="radio" name="listGroupRadio" value=""
-																	id="thirdRadio" />
-																<label class="form-check-label" for="thirdRadio">Third radio</label>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A list item
-																<span class="badge shade-primary rounded-pill">14</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A second list item
-																<span class="badge shade-green rounded-pill">2</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A third list item
-																<span class="badge shade-yellow rounded-pill">1</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A list item
-																<span class="badge shade-primary">14</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A second list item
-																<span class="badge shade-green">2</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A third list item
-																<span class="badge shade-red">1</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A list item
-																<span class="badge red">14</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A second list item
-																<span class="badge rounded-pill yellow">14</span>
-															</li>
-															<li class="list-group-item d-flex justify-content-between align-items-center">
-																A third list item
-																<span class="badge rounded-pill green">14</span>
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item">An item</li>
-															<li class="list-group-item">A second item</li>
-															<li class="list-group-item">A third item</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item active" aria-current="true">
-																An active item
-															</li>
-															<li class="list-group-item">A second item</li>
-															<li class="list-group-item">A third item</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group">
-															<li class="list-group-item disabled" aria-disabled="true">
-																An disabled item
-															</li>
-															<li class="list-group-item">A second item</li>
-															<li class="list-group-item">A third item</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<div class="list-group">
-															<a href="#" class="list-group-item list-group-item-action active" aria-current="true">
-																The current link item
-															</a>
-															<a href="#" class="list-group-item list-group-item-action">A second link item</a>
-															<a href="#" class="list-group-item list-group-item-action">A third link item</a>
-														</div>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<div class="list-group">
-															<button type="button" class="list-group-item list-group-item-action active"
-																aria-current="true">
-																The current button
-															</button>
-															<button type="button" class="list-group-item list-group-item-action">
-																A second button item
-															</button>
-															<button type="button" class="list-group-item list-group-item-action">
-																A third button item
-															</button>
-														</div>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
-											<div class="col-sm-4 col-12">
-												<!-- Card start -->
-												<div class="card">
-													<div class="card-body">
-														<ul class="list-group list-group-numbered">
-															<li class="list-group-item">An item number</li>
-															<li class="list-group-item">
-																A second item number
-															</li>
-															<li class="list-group-item">
-																A third item number
-															</li>
-														</ul>
-													</div>
-												</div>
-												<!-- Card end -->
-											</div>
+										<div class="m-0">
+											<label class="form-label">Input Field</label>
+											<input type="text" class="form-control" placeholder="Enter text" />
 										</div>
-										<!-- Row end -->
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Disabled Input Field</label>
+											<input type="text" class="form-control" value="Disabled Field" disabled="" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-4 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Readonly Input Field</label>
+											<input type="text" class="form-control" value="Readonly Field" readonly="" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Password Input Field</label>
+											<input type="password" class="form-control" value="12345" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Selcet Field</label>
+											<select class="form-select" aria-label="Default select example">
+												<option selected="">Open this select menu</option>
+												<option value="1">One</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Disabled Selcet</label>
+											<select class="form-select" aria-label="Default select example" disabled="">
+												<option>Open this select menu</option>
+												<option selected="" value="1">Disabled</option>
+												<option value="2">Two</option>
+												<option value="3">Three</option>
+											</select>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-lg-3 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Select Color</label>
+											<input type="color" class="form-control form-control-color" id="exampleColorInput" value="#276dd9"
+												title="Choose your color" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label class="form-label">Textarea</label>
+											<textarea class="form-control" rows="3"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="m-0">
+											<label for="exampleDataList" class="form-label">Datalist example</label>
+											<input class="form-control" list="datalistOptions" id="exampleDataList"
+												placeholder="Type to search..." />
+											<datalist id="datalistOptions">
+												<option value="San Francisco"></option>
+												<option value="New York"></option>
+												<option value="Seattle"></option>
+												<option value="Los Angeles"></option>
+												<option value="Chicago"></option>
+											</datalist>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<span class="input-group-text">@</span>
+											<input type="text" class="form-control" placeholder="Username" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Name" />
+											<span class="input-group-text">@test.com</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<span class="input-group-text">$</span>
+											<input type="text" class="form-control" />
+											<span class="input-group-text">.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<span class="input-group-text">$</span>
+											<span class="input-group-text">0.00</span>
+											<input type="text" class="form-control" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" />
+											<span class="input-group-text">$</span>
+											<span class="input-group-text">0.00</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="Username" />
+											<span class="input-group-text">@</span>
+											<input type="text" class="form-control" placeholder="Server" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-sm-12 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<span class="input-group-text"></span>
+											<textarea class="form-control" aria-label="With textarea"></textarea>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<button class="btn btn-outline-secondary" type="button">
+												Button
+											</button>
+											<input type="text" class="form-control" placeholder="" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" placeholder="" />
+											<button class="btn btn-outline-secondary" type="button">
+												Button
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<button class="btn btn-outline-secondary" type="button">
+												Button
+											</button>
+											<input type="text" class="form-control" placeholder="" />
+											<button class="btn btn-outline-secondary" type="button">
+												Button
+											</button>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+												aria-expanded="false">
+												Dropdown
+											</button>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li>
+													<a class="dropdown-item" href="#">Another action</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+											<input type="text" class="form-control" aria-label="Text input with dropdown button" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" aria-label="Text input with dropdown button" />
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+												aria-expanded="false">
+												Dropdown
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li>
+													<a class="dropdown-item" href="#">Another action</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+												aria-expanded="false">
+												Dropdown
+											</button>
+											<ul class="dropdown-menu">
+												<li>
+													<a class="dropdown-item" href="#">Action before</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Another action before</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+											<input type="text" class="form-control" aria-label="Text input with 2 dropdown buttons" />
+											<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+												aria-expanded="false">
+												Dropdown
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li>
+													<a class="dropdown-item" href="#">Another action</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<button type="button" class="btn btn-outline-secondary">
+												Action
+											</button>
+											<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+												data-bs-toggle="dropdown" aria-expanded="false">
+												<span class="visually-hidden">Toggle Dropdown</span>
+											</button>
+											<ul class="dropdown-menu">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li>
+													<a class="dropdown-item" href="#">Another action</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+											<input type="text" class="form-control" aria-label="Text input with segmented dropdown button" />
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-xxl-4 col-sm-6 col-12">
+								<div class="card">
+									<div class="card-body">
+										<div class="input-group">
+											<input type="text" class="form-control" aria-label="Text input with segmented dropdown button" />
+											<button type="button" class="btn btn-outline-secondary">
+												Action
+											</button>
+											<button type="button" class="btn btn-outline-secondary dropdown-toggle dropdown-toggle-split"
+												data-bs-toggle="dropdown" aria-expanded="false">
+												<span class="visually-hidden">Toggle Dropdown</span>
+											</button>
+											<ul class="dropdown-menu dropdown-menu-end">
+												<li><a class="dropdown-item" href="#">Action</a></li>
+												<li>
+													<a class="dropdown-item" href="#">Another action</a>
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Something else here</a>
+												</li>
+												<li>
+													<hr class="dropdown-divider" />
+												</li>
+												<li>
+													<a class="dropdown-item" href="#">Separated link</a>
+												</li>
+											</ul>
+										</div>
 									</div>
 								</div>
 							</div>
