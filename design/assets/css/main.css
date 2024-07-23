@@ -2151,6 +2151,7 @@ ul.updates li a i {
   line-height: 150%;
 }
 .card .card-body {
+  display:inline-block;
   padding: 1rem 1.25rem;
 }
 .card .card-loading {
