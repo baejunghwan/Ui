@@ -175,6 +175,11 @@ body {
 					4. Loading CSS
 	************************************************
 ************************************************/
+.page-link {
+  display: flex;
+  float: left;
+  color: blue;
+}
 #loading-wrapper {
   position: fixed;
   top: 0;
@@ -2188,6 +2193,7 @@ ul.updates li a i {
 }
 .card.card-primary .card-title {
   color: #1553a3;
+  text-align: 
 }
 .card.card-primary .card-footer {
   border-top: 1px solid #1553a3;
