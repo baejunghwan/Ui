@@ -1068,7 +1068,7 @@ ul.updates li a i {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  margin-left: auto;
+  margin: center;
 }
 .header-actions-container .dropdown-toggle::after {
   display: none;
@@ -3134,6 +3134,8 @@ button:focus:not(:focus-visible) {
   border: 1px solid #c8d0da;
   color: #232629;
   background-color: #ffffff;
+  float: left;
+  margin-right: 5px;
 }
 .form-select:hover {
   border: 1px solid #5d6a7c;
