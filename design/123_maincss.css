@@ -801,7 +801,7 @@ ul.updates li a i {
     margin-left:auto
 }
 .header-actions-container .dropdown-toggle::after {
-    display:none
+    display:none    
 }
 .header-profile {
     padding:7px 25px
