@@ -1748,6 +1748,7 @@ ul.updates li a i {
     padding:1rem 1.25rem 0 1.25rem;
     background:rgba(0,0,0,0);
     border:0
+    
 }
 .card .card-header.space-between {
     display:flex;
@@ -3082,4 +3083,10 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 }
 .bi bi-server {
     justify-content: flex-end;
+}
+.datebox {
+    text-align: center;
+}
+.searchbar {
+    width: 100px;
 }

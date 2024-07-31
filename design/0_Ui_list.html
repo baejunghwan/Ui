@@ -82,7 +82,11 @@
 					<div class="header-actions d-xl-flex d-lg-none gap-4">
 						<div class="dropdown">
 							<a class="dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="bi bi-envelope-open fs-5 lh-1"></i>
+								<i class="bi bi-sun"></i>
+								<span class="count-label"></span>
+							</a>
+							<a class="dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+								<i class="bi bi-bell"></i>
 								<span class="count-label"></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end shadow-lg">
@@ -123,7 +127,7 @@
 						</div>
 						<a href="account-settings.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
 							data-bs-custom-class="custom-tooltip-blue" data-bs-title="Settings">
-							<i class="bi bi-gear fs-5"></i>
+							<i class="bi bi-grid-3x3-gap-fill"></i>
 						</a>
 					</div>
 					<!-- Header actions start -->
@@ -493,28 +497,61 @@
 								<div class="card"> 
 									<div class="card-header"> 
 										<div class="row-1"> 
-											<div class="col-2"> 
+											<div class="col-12">
+												<div style="display: inline-block;"> 
 												<label class="form-label"></label> 
 													<select class="form-select" aria-label="Default select example"> 
 														<option selected="">N</option>
 														<option value="1">N1</option>
 														<option value="2">N2</option>
 														<option value="3">N3</option>
-													</select>
+													</select></div>	
+													<div style="display: inline-block;">
 												<label class="form-label"></label>
 													<select class="form-select" aria-label="Default select example"> 
 														<option selected="">Y</option>
 														<option value="1">Y1</option>
 														<option value="2">Y2</option>
 														<option value="3">Y3</option> 
-													</select>
+													</select></div>
+
+													<div style="display: inline-block;">
 												<label class="form-label"></label>
 													<select class="form-select" aria-label="Default select example"> 
 														<option selected="">수정일</option>
 														<option value="1">일자1</option>
 														<option value="2">일자2</option>
 														<option value="3">일자3</option> 
-													</select>   
+													</select></div>
+												<div class="datebox" style="display: inline-block;">
+													<input type="datetime" placeholder="2024-06-05"></div>
+												<div class="datebox" style="display: inline-block;">
+													<input type="datetime" placeholder="2024-07-05"></div>
+													
+												<div class="searchbar"> 
+												<label class="form-label"></label> 
+												<select class="form-select" aria-label="Default select example"> 
+													<option selected="">검색구분</option> 
+													<option value="1">검색1</option> 
+													<option value="2">검색2</option> 
+													<option value="3">검색3</option> 
+												</select></div>	
+												<div style="display: inline-block;"> 
+													<input type="search" placeholder="검색어"> 
+												</div> 
+												<div style="display: inline-block;"> 
+												<div class="d-flex gap-2 justify-content-end">
+													<button type="button" class="btn btn-outline-secondary">
+														<div class="icon">
+															<i class="bi bi-search"></i>
+														</div>
+													</button>
+													<button type="button" class="btn btn-outline-secondary">
+														<div class="icon">
+															<i class="bi bi-arrow-clockwise"></i>
+														</div>
+													</button>
+												</div>
 												</div>	 
 											</div>		
 										</div> 
@@ -523,14 +560,19 @@
 									<div class="card-body">
 										<div class="table-responsive">
 											<table id="highlightRowColumn" class="table custom-table">
-												<thead> 
+												<thead><strong><h4>Total:171</h4></strong>
 													<tr>
 														<th><input type="checkbox"></th>
 														<th>#</th>
 														<th>코드그룹 코드</th>
 														<th>코드그룹 이름</th>
 														<th>코드</th>
+														<th>대체코드</th>
 														<th>코드이름</th>
+														<th>코드 이름(영문)</th>
+														<th>사용</th>
+														<th>순서</th>
+														<th>등록일</th> 	
 													</tr>
 												</thead>
 												<tbody>
@@ -734,7 +776,7 @@
 														<td>2009/10/09</td>
 														<td>$1,200,000</td>
 													</tr>
-													<tr>
+													<!-- <tr>
 														<td>Gavin Joyce</td>
 														<td>Developer</td>
 														<td>Edinburgh</td>
@@ -989,7 +1031,7 @@
 														<td>27</td>
 														<td>2011/01/25</td>
 														<td>$112,000</td>
-													</tr>
+													</tr> --> 
 												</tbody>
 											</table>
 										</div>
@@ -1613,6 +1655,8 @@
 									</div>
 								</div>
 								Card end -->
+
+								
 							</div>
 						</div>
 						<!-- Row end -->
