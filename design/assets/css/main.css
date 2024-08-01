@@ -175,11 +175,6 @@ body {
 					4. Loading CSS
 	************************************************
 ************************************************/
-.title-link {
-  display: flex;
-  float: left;
-  color: blue;
-}
 #loading-wrapper {
   position: fixed;
   top: 0;
@@ -1073,7 +1068,7 @@ ul.updates li a i {
   align-items: center;
   flex-direction: row;
   justify-content: flex-end;
-  margin: center;
+  margin-left: auto;
 }
 .header-actions-container .dropdown-toggle::after {
   display: none;
@@ -1581,7 +1576,7 @@ ul.updates li a i {
   font-weight: 600;
 }
 .contact-card .list-group {
-  text-align: left;
+  text-align: center;
 }
 .contact-card .list-group .list-group-item {
   background: transparent;
@@ -2156,7 +2151,6 @@ ul.updates li a i {
   line-height: 150%;
 }
 .card .card-body {
-  display:inline-block;
   padding: 1rem 1.25rem;
 }
 .card .card-loading {
@@ -2193,7 +2187,6 @@ ul.updates li a i {
 }
 .card.card-primary .card-title {
   color: #1553a3;
-  text-align: 
 }
 .card.card-primary .card-footer {
   border-top: 1px solid #1553a3;
@@ -3140,8 +3133,6 @@ button:focus:not(:focus-visible) {
   border: 1px solid #c8d0da;
   color: #232629;
   background-color: #ffffff;
-  float: left;
-  margin-right: 5px;
 }
 .form-select:hover {
   border: 1px solid #5d6a7c;
@@ -3567,3 +3558,6 @@ select:-webkit-autofill:focus {
   padding-right: 10px;
   padding-left: 10px;
 }
+/* .pagination {
+  align-content: center;
+} */
