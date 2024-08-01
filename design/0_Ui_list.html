@@ -15,7 +15,6 @@
 		<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
 		<meta property="og:type" content="Website">
 		<meta property="og:site_name" content="Bootstrap Gallery">
-		<link rel="shortcut icon" href="assets/images/favicon.svg" />
 
 		<!-- Title -->
 		<title>Admin_list</title>
@@ -42,6 +41,7 @@
 		<!-- Data Tables -->
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5-custom.css" />
+	
 	</head>
 
 	<body>
@@ -443,10 +443,8 @@
 						</div>
 					</div>
 					<!-- Sidebar menu ends --> 
-
 				</nav>
 				<!-- Sidebar wrapper end --> 
-
 				<!-- Content wrapper scroll start --> 
 				<div class="content-wrapper-scroll">
 
@@ -482,75 +480,87 @@
 							</li>
 						</ul> -->
 						<!-- Live updates end -->
-					</div>
+					<!-- </div> -->
 					<!-- Main header ends -->
 
-					<!-- Content wrapper start -->
+					<!-- Content wrapper start 회색영역 -->
 					<div class="content-wrapper">
+						<p>page 1 > page 2 > Default</p> 
+						<h2><b>Code</b></h2>
+						<div class="header-grid">
+							<div class="row-1"> 
+								<div class="col-12">
+									<div style="display: inline-block;"> 
+										<label class="form-label"> 
+											<select class="form-select" aria-label="Default select example"> 
+												<option selected="">N</option>
+												<option value="1">N1</option>
+												<option value="2">N2</option>
+												<option value="3">N3</option>
+											</select>
+										</label>
+										<label class="form-label">
+											<select class="form-select" aria-label="Default select example"> 
+												<option selected="">Y</option>
+												<option value="1">Y1</option>
+												<option value="2">Y2</option>
+												<option value="3">Y3</option> 
+											</select>
+										</label>
+										<label class="form-label">
+											<select class="form-select" aria-label="Default select example"> 
+												<option selected="">수정일</option>
+												<option value="1">1</option>
+												<option value="2">2</option>
+												<option value="3">3</option> 
+											</select>
+										</label>
+											<div class="float-option1">
+											<input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting" />
+											</div>
+											<div class="flaot-option2">
+											<input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting" />
+											</div>
+										<!-- <>div class="searchbar">  -->
+											<label class="form-label"></label> 
+											<select class="form-select" aria-label="Default select example"> 
+												<option selected="">검색구분</option> 
+												<option value="1">검색1</option> 
+												<option value="2">검색2</option> 
+												<option value="3">검색3</option> 
+											</select></div>	
+											<div style="display: inline-block;"> 
+												<form class="form-inline my-2 my-lg-0">
+													<input class="form-control mr-sm-2" type="search" placeholder="검색어" aria-label="Search">
+											</div> 
+											<div style="display: inline-block;"> 
+									<div class="d-flex gap-2 justify-content-end">
+										<button type="button" class="btn btn-outline-secondary">
+											<div class="icon">
+												<i class="bi bi-search"></i>
+											</div>
+										</button>
+										<button type="button" class="btn btn-outline-secondary">
+											<div class="icon">
+												<i class="bi bi-arrow-clockwise"></i>
+											</div>
+										</button>
+					</div>							
+							
+							<!-- 수정함 | container-title -->	 
+								
+							<div class="card"> 
+									<!-- 흰영역 -->
+									
+				 
+										
+									<div class="card-title"></div> 
+									<div style="display: inline-block;">
+										</div>
 
-							<!-- 수정함 | container-title -->						
-							<div class="container-title"> 
-								<div class="card"> 
-									<div class="card-title"> 
-										<p>page 1 > page 2 > Default</p> 
-									<div class="card-title"><h2><b>Code</b></h2></div> 
-								<div class="card"> 
-									<div class="card-header"> 
-										<div class="row-1"> 
-											<div class="col-12">
-												<div style="display: inline-block;"> 
-												<label class="form-label"></label> 
-													<select class="form-select" aria-label="Default select example"> 
-														<option selected="">N</option>
-														<option value="1">N1</option>
-														<option value="2">N2</option>
-														<option value="3">N3</option>
-													</select></div>	
 													<div style="display: inline-block;">
-												<label class="form-label"></label>
-													<select class="form-select" aria-label="Default select example"> 
-														<option selected="">Y</option>
-														<option value="1">Y1</option>
-														<option value="2">Y2</option>
-														<option value="3">Y3</option> 
-													</select></div>
-
-													<div style="display: inline-block;">
-												<label class="form-label"></label>
-													<select class="form-select" aria-label="Default select example"> 
-														<option selected="">수정일</option>
-														<option value="1">일자1</option>
-														<option value="2">일자2</option>
-														<option value="3">일자3</option> 
-													</select></div>
-												<div class="datebox" style="display: inline-block;">
-													<input type="datetime" placeholder="2024-06-05"></div>
-												<div class="datebox" style="display: inline-block;">
-													<input type="datetime" placeholder="2024-07-05"></div>
-													
-												<div class="searchbar"> 
-												<label class="form-label"></label> 
-												<select class="form-select" aria-label="Default select example"> 
-													<option selected="">검색구분</option> 
-													<option value="1">검색1</option> 
-													<option value="2">검색2</option> 
-													<option value="3">검색3</option> 
-												</select></div>	
-												<div style="display: inline-block;"> 
-													<input type="search" placeholder="검색어"> 
-												</div> 
-												<div style="display: inline-block;"> 
-												<div class="d-flex gap-2 justify-content-end">
-													<button type="button" class="btn btn-outline-secondary">
-														<div class="icon">
-															<i class="bi bi-search"></i>
-														</div>
-													</button>
-													<button type="button" class="btn btn-outline-secondary">
-														<div class="icon">
-															<i class="bi bi-arrow-clockwise"></i>
-														</div>
-													</button>
+												
+												
 												</div>
 												</div>	 
 											</div>		
@@ -559,7 +569,7 @@
 								</div>
 									<div class="card-body">
 										<div class="table-responsive">
-											<table id="highlightRowColumn" class="table custom-table">
+											<table id="highlightRowColumn" class="table custom-table">																				
 												<thead><strong><h4>Total:171</h4></strong>
 													<tr>
 														<th><input type="checkbox"></th>
@@ -1707,6 +1717,8 @@
 
 		<!-- Main Js Required -->
 		<script src="assets/js/main.js"></script>
+
+
 	</body>
 
 </html>

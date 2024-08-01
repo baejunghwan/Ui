@@ -783,6 +783,7 @@ ul.updates li a i {
     -webkit-border-radius:30px;
     -moz-border-radius:30px;
     border-radius:30px
+    
 }
 @media screen and (max-width: 991.98px) {
     .search-container {
@@ -3089,4 +3090,17 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 }
 .searchbar {
     width: 100px;
+}
+.float-option1 {
+    display: inline-block;
+    width: 50%;
+}
+.float-option2 {
+    display: inline-block;
+    width: 50%;
+}
+.header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
