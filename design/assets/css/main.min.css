@@ -3078,10 +3078,11 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 }
 .container-button {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.btn btn-outline-secondary {
-    justify-content: flex-start;
-}
+/* .btn btn-outline-secondary {
+} */
 .bi bi-server {
     justify-content: flex-end;
 }
