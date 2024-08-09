@@ -66,13 +66,13 @@
 				</div>
 
 				<!-- Header actions ccontainer start -->
-				<div class="header-actions-container">
+				<!-- <div class="header-actions-container"> -->
 
 					<!-- Search container start -->
-					<div class="search-container me-4 d-xl-block d-lg-none">
+					<!-- <div class="search-container me-4 d-xl-block d-lg-none"> -->
 
 						<!-- Search input group start -->
-						<input type="text" class="form-control" placeholder="Search" />
+						<!-- <input type="text" class="form-control" placeholder="Search" /> -->
 						<!-- Search input group end -->
 
 						</div>
@@ -515,39 +515,43 @@
 												<option value="3">3</option> 
 											</select> 
 										</label> 
-											<div class="float-option1">
-											<input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting" />
-											</div>
-											<div class="flaot-option2">
-											<input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting" />
-											</div>
-										<!-- <>div class="searchbar">  -->
-											<label class="form-label"></label> 
+										<div class="display inline-block"> 
+											<div class="flaot-option1"> 
+											<input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting"> 
+											</div> 
+											<div class="flaot-option2"> 
+											<input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting"> 
+											</div> 
+										<!-- <>div class="searchbar">  -->	
+											<label class="form-label"> 		
 											<select class="form-select" aria-label="Default select example"> 
 												<option selected="">검색구분</option> 
 												<option value="1">검색1</option> 
 												<option value="2">검색2</option> 
 												<option value="3">검색3</option> 
-											</select></div>	
-											<div style="display: inline-block;"> 
+											</select></label> 
+											<!-- <div style="display: inline-block;"> 
 												<form class="form-inline my-2 my-lg-0">
 													<input class="form-control mr-sm-2" type="search" placeholder="검색어" aria-label="Search">
-											</div> 
+											</div>  -->
 											<div style="display: inline-block;"> 
-									<div class="d-flex gap-2 justify-content-end">
-										<button type="button" class="btn btn-outline-secondary">
-											<div class="icon">
-												<i class="bi bi-search"></i>
+												<div class="d-flex gap-2 justify-content-end"> 
+													<button type="button" class="btn btn-outline-secondary"> 
+														<div class="icon"> 
+															<i class="bi bi-search"></i> 
+														</div>
+													</button> 
+													<button type="button" class="btn btn-outline-secondary">
+														<div class="icon">
+															<i class="bi bi-arrow-clockwise"></i>
+														</div>
+													</button>	
+												</div>
 											</div>
-										</button>
-										<button type="button" class="btn btn-outline-secondary">
-											<div class="icon">
-												<i class="bi bi-arrow-clockwise"></i>
-											</div>
-										</button>
-									</div>	
-								</div>	 
-							</div>		
+										</div>	
+									</div>	 
+								</div>		
+										
 						</div> 
 					</div>	
 				</div>						
@@ -555,18 +559,18 @@
 									
 										<!-- 흰영역 -->
 				<div class="card"> 
-					<div class="card-title"></div> 
-						<div style="display: inline-block;"></div> 
+					<!-- <div class="card-title"></div> 
+						<div style="display: inline-block;"></div>  -->
 					<div class="card-body">
 						<div class="table-responsive">
 							<table id="highlightRowColumn" class="table custom-table">																				
 								<thead><strong><h4>Total:171</h4></strong>
-									<select class="form-select" aria-label="Default select example"> 
+									<!-- <select class="form-select" aria-label="Default select example"> 
 										<option selected="">1</option> 
 										<option value="1">2</option> 
 										<option value="2">3</option> 
 										<option value="3">4</option> 
-									</select> 
+									</select>  -->
 									<tr>
 										<th><input type="checkbox"></th>
 										<th>#</th>
@@ -905,13 +909,42 @@
 										<td></td>
 										<td></td>
 										<td></td>
-									</tr>											
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-				<nav aria-label="...">
+									</tr>				
+									<div class="container-button">
+										<div class="row gx-3">
+											<div class="col-12">
+												<div class="d-flex gap-2 justify-content-end">
+													<button type="button" class="btn btn-success">
+													<div class="icon">
+														<i class="bi bi-x"></i>
+													</div>
+													</button>
+													<button type="button" class="btn btn-outline-secondary">
+													<div class="icon">
+														<i class="bi bi-trash"></i>
+													</div>
+													</button>
+													<button type="button" class="btn btn-outline-secondary">
+														<div class="icon">
+															<i class="bi bi-file-earmark-excel-fill"></i>
+														</div>
+													</button>
+													<button type="button" class="btn btn-success">
+														<div class="icon">
+															<i class="bi bi-plus-lg"></i>
+															<div class="label"></div>
+														</div>
+													</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>							
+					</tbody>
+				</table>
+				<!-- <nav aria-label="...">
 					<ul class="pagination pagination-sm">
 						<li class="page-item active" aria-current="page">
 						<span class="page-link">1</span>
@@ -922,8 +955,8 @@
 						<li class="page-item"><a class="page-link" href="#">5</a></li>
 						<li class="page-item"><a class="page-link" href="#">></a></li>
 					</ul>
-					</nav>
-					<div class="container-button">
+					</nav> -->
+					<!-- <div class="container-button">
 						<div class="row gx-3">
 							<div class="col-12">
 								<div class="d-flex gap-2 justify-content-end">
@@ -951,7 +984,7 @@
 								</div>
 							</div>
 						</div>
-					</div>
+					</div> -->
 								<!-- Card end -->
 
 								<!-- Card start -->
