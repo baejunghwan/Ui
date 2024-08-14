@@ -881,7 +881,7 @@ ul.updates li a i {
 .content-wrapper {
     padding:20px 30px 0 30px;
     height:calc(100vh - 170px);
-    overflow:auto
+    /* overflow:auto */
 }
 .app-footer {
     font-size:.75rem;
