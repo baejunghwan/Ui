@@ -17,7 +17,7 @@
 		<meta property="og:site_name" content="Bootstrap Gallery">
 
 		<!-- Title -->
-		<title>Admin_list</title>
+		<title>Admin_list1</title>
 
 		<!-- *************
 			************ Common Css Files *************
@@ -41,7 +41,7 @@
 		<!-- Data Tables -->
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
 		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5-custom.css" />
-	
+
 	</head>
 
 	<body>
@@ -446,7 +446,7 @@
 				</nav>
 				<!-- Sidebar wrapper end --> 
 				<!-- Content wrapper scroll start --> 
-				<div class="content-wrapper-scroll">
+				<!-- <div class="content-wrapper-scroll"> -->
 
 					<!-- Main header starts --> 
 					<!-- <div class="main-header d-flex align-items-center justify-content-between position-relative">
@@ -484,80 +484,77 @@
 					<!-- Main header ends -->
 
 					<!-- Content wrapper start 회색영역 -->
+				<div class="content-wrapper-scroll">
 					<div class="content-wrapper">
-						<div><p>page 1 > page 2 > Default</p></div> 
+						<p class="content-text-color">page 1</p> > <p class="content-text-color">page 2</p> > Defualt
 						<div><h2><b>Code</b></h2></div>
-							<div class="row-2"> 
-								<div class="col-2">
-									<div class="select-grid">
-										<label class="form-label"> 
-											<select class="form-select" aria-label="Default select example"> 
-												<option selected="">N</option> 
-												<option value="1">N1</option> 
-												<option value="2">N2</option> 
-												<option value="3">N3</option> 
-											</select> 
-										</label> 
-										<label class="form-label"> 
-											<select class="form-select" aria-label="Default select example"> 
-												<option selected="">Y</option> 
-												<option value="1">Y1</option> 
-												<option value="2">Y2</option> 
-												<option value="3">Y3</option> 
-											</select>
-										</label>
-										<label class="form-label">
-											<select class="form-select" aria-label="Default select example"> 
-												<option selected="">수정일</option> 
-												<option value="1">1</option> 
-												<option value="2">2</option> 
-												<option value="3">3</option> 
-											</select> 
-										</label> 
-										<!-- <div class="display inline-block">  -->
-										<div class="flaot-option1"> 
-											<input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting"> 
-										</div> 
-										<div class="flaot-option2"> 
-											<input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting"> 
-										</div> 
-										<div style="float: left;">
-											<!-- <div class="searchbar"> 	 -->
-											<label class="form-label"> 		
-											<select class="form-select" aria-label="Default select example"> 
-												<option selected="">검색구분</option> 
-												<option value="1">검색1</option> 
-												<option value="2">검색2</option> 
-												<option value="3">검색3</option> 
-											</select></label> 
+						<div class="row-2"> 
+							<div class="col-2">
+								<label class="form-label"> 
+									<select class="form-select" aria-label="Default select example"> 
+										<option selected="">N</option> 
+										<option value="1">N1</option> 
+										<option value="2">N2</option> 
+										<option value="3">N3</option> 
+									</select> 
+								</label> 
+								<label class="form-label"> 
+									<select class="form-select" aria-label="Default select example"> 
+										<option selected="">Y</option> 
+										<option value="1">Y1</option> 
+										<option value="2">Y2</option> 
+										<option value="3">Y3</option> 
+									</select>
+								</label>
+								<label class="form-label">
+									<select class="form-select" aria-label="Default select example"> 
+										<option selected="">수정일</option> 
+										<option value="1">1</option> 
+										<option value="2">2</option> 
+										<option value="3">3</option> 
+									</select> 
+								</label> 
+							<div class="flaot-option2">
+								<div><input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting"></div>
+								<div><input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting"></div>
+							</div>  
+						<div class="searchbar"> 	 
+							<label class="form-label"> 
+								<select class="form-select" aria-label="Default select example"> 
+									<option selected="">검색구분</option> 
+									<option value="1">검색1</option> 
+									<option value="2">검색2</option> 
+									<option value="3">검색3</option> 
+								</select> 
+							</label> 
+						</div> 
+								<!-- <div class="flaot-option2">  -->
+								<input type="text" class="form-control" placeholder="검색어" id="date-formatting"> 
+								<!-- </div>  -->
+									<!-- <div style="display: inline-block;"> 
+										<form class="form-inline my-2 my-lg-0">
+											<input class="form-control mr-sm-2" type="search" placeholder="검색어" aria-label="Search">
+									</div>  -->
+									<!-- <div style="display: inline-block;">  -->
+									<div class="d-flex gap-2 justify-content-end"> 
+										<button type="button" class="btn btn-outline-secondary"> 
+											<div class="icon"> 
+												<i class="bi bi-search"></i> 
+											</div> 
+										</button> 
+										<button type="button" class="btn btn-outline-secondary"> 
+											<div class="icon"> 
+												<i class="bi bi-arrow-clockwise"></i> 
 											</div>
-											<!-- <div class="flaot-option2">  -->
-											<input type="text" class="form-control" placeholder="검색어" id="date-formatting"> 
-											<!-- </div>  -->
-											<!-- <div style="display: inline-block;"> 
-												<form class="form-inline my-2 my-lg-0">
-													<input class="form-control mr-sm-2" type="search" placeholder="검색어" aria-label="Search">
-											</div>  -->
-											<!-- <div style="display: inline-block;">  -->
-											<div class="d-flex gap-2 justify-content-end"> 
-												<button type="button" class="btn btn-outline-secondary"> 
-													<div class="icon"> 
-														<i class="bi bi-search"></i> 
-													</div>
-												</button> 
-												<button type="button" class="btn btn-outline-secondary">
-													<div class="icon">
-														<i class="bi bi-arrow-clockwise"></i>
-													</div>
-												</button>	
-											</div>
-										</div>
-									</div>	 
-								</div>		
-							</div>
-						</div>
-					</div>	
-				</div>						
+										</button>	
+									</div>
+								</div>
+							</div>	 
+						</div>		
+					</div>
+				</div>
+			</div>	
+										
 							<!-- 수정함 | container-title -->	 
 									
 										<!-- 흰영역 -->
@@ -1604,7 +1601,7 @@
 					<!-- Content wrapper end -->
 				<!-- </div> -->
 				<!-- Content wrapper scroll end -->
-
+				
 				<!-- App Footer start -->
 				<div class="app-footer">
 					<h5>Copyright 2024. Bae Junghwan all rights reserved.</h5>

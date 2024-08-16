@@ -3092,10 +3092,9 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 .searchbar {
     width: 100px;
 }
-.float-option1 {
+/* .float-option {
     display: inline-block;
-    width: 50%;
-}
+    /* width: 25%; */
 .float-option2 {
     display: inline-block;
     width: 50%;
@@ -3104,4 +3103,10 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
+}
+/* 내가 추가한 css */
+.content-text-color {
+    color: blue;
+    display: inline;
+    font-weight: 600;
 }
