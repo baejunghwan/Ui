@@ -779,7 +779,7 @@ ul.updates li a i {
     font-weight:400
 }
 .search-container .form-control {
-    min-width:240px;
+    min-width:450px;
     -webkit-border-radius:30px;
     -moz-border-radius:30px;
     border-radius:30px
@@ -2376,9 +2376,28 @@ button:focus:not(:focus-visible) {
 }
 .btn-success {
     color:#fff;
-    background:#119a2c;
-    border:1px solid #119a2c
+    background:#FF0000;
+    border:1px solid #FF0000
 }
+/* 내가 추가 success2,3 */
+.btn-success2 {
+    /* margin-left: auto; */
+    color:#fff;
+    background:#1E821E;
+    border:1px solid #1E821E
+}
+.btn-success3 {
+    /* margin-left: auto; */
+    color:#fff;
+    background:#0000FF;
+    border:1px solid #0000FF
+}
+/* .card-head {
+    background-color: #eef1f6;
+    border-style: solid;
+    border-color: #adaead;
+    border-width: 1px;
+} */
 .btn-success:hover {
     color:#fff !important;
     background:#0a9126 !important;
@@ -3082,6 +3101,7 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
     align-items: center;
 }
 /* .btn btn-outline-secondary {
+    color: red;
 } */
 .bi bi-server {
     justify-content: flex-end;
@@ -3110,3 +3130,15 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
     display: inline;
     font-weight: 600;
 }
+.form-control-date {
+    display: inline-block;
+}
+.inputs {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* grid-template-rows: repeat(2, 2fr); */
+    column-gap: 5px;
+    /* grid-template-areas: 
+    "main main main main main ."
+    "main main main mian mian main"; */
+}  
