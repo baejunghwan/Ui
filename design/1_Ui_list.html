@@ -1,502 +1,564 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<!-- Required meta tags -->
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-		<!-- Meta -->
-		<meta name="description" content="Sapphire - Responsive Bootstrap 5 Dashboard Template" />
-		<meta name="author" content="Bootstrap Gallery" />
-		<link rel="canonical" href="https://www.bootstrap.gallery/">
-		<meta property="og:url" content="https://www.bootstrap.gallery">
-		<meta property="og:title" content="Admin Templates - Dashboard Templates | Bootstrap Gallery">
-		<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
-		<meta property="og:type" content="Website">
-		<meta property="og:site_name" content="Bootstrap Gallery">
-		<link rel="shortcut icon" href="assets/images/favicon.svg" />
+	<!-- Meta -->
+	<meta name="description" content="Sapphire - Responsive Bootstrap 5 Dashboard Template" />
+	<meta name="author" content="Bootstrap Gallery" />
+	<link rel="canonical" href="https://www.bootstrap.gallery/">
+	<meta property="og:url" content="https://www.bootstrap.gallery">
+	<meta property="og:title" content="Admin Templates - Dashboard Templates | Bootstrap Gallery">
+	<meta property="og:description" content="Marketplace for Bootstrap Admin Dashboards">
+	<meta property="og:type" content="Website">
+	<meta property="og:site_name" content="Bootstrap Gallery">
+	<link rel="shortcut icon" href="assets/images/favicon.svg" />
 
-		<!-- Title -->
-		<title>Ui_list</title>
+	<!-- Title -->
+	<title>Ui_list</title>
 
-		<!-- *************
+	<!-- *************
 			************ Common Css Files *************
 		************ -->
-		<!-- Bootstrap css -->
-		<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+	<!-- Bootstrap css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 
-		<!-- Bootstrap font icons css -->
-		<link rel="stylesheet" href="assets/fonts/bootstrap/bootstrap-icons.css" />
+	<!-- Bootstrap font icons css -->
+	<link rel="stylesheet" href="assets/fonts/bootstrap/bootstrap-icons.css" />
 
-		<!-- Main css -->
-		<link rel="stylesheet" href="assets/css/main.min.css" />
+	<!-- Main css -->
+	<link rel="stylesheet" href="assets/css/main.min.css" />
 
-		<!-- *************
+	<!-- *************
 			************ Vendor Css Files *************
 		************ -->
 
-		<!-- Scrollbar CSS -->
-		<link rel="stylesheet" href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
+	<!-- Scrollbar CSS -->
+	<link rel="stylesheet" href="assets/vendor/overlay-scroll/OverlayScrollbars.min.css" />
 
-		<!-- Data Tables -->
-		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
-		<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5-custom.css" />
-	</head>
+	<!-- Data Tables -->
+	<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5.css" />
+	<link rel="stylesheet" href="assets/vendor/datatables/dataTables.bs5-custom.css" />
 
-	<body>
+	<!-- 내가 작성한 CSS -->
+	<style type="text/css">
+		/* inputs | 상단 배치를 위한 css 잡아줌  */
+		.form-select {
+			grid-area: a;
+		}
 
-		<!-- Page wrapper start -->
-		<div class="page-wrapper">
+		.form-control {
+			grid-area: b;
+		}
 
-			<!-- Page header starts -->
-			<div class="page-header">
+		.btn btn-outline-secondary {
+			grid-area: c;
+		}
 
-				<!-- Sidebar brand starts -->
-				<div class="brand">
-					<a href="index.html" class="logo">
-						<img src="assets/images/logo.svg" class="d-none d-md-block me-4" alt="Sapphire Admin Dashboard" />
-						<img src="assets/images/logo-sm.svg" class="d-block d-md-none me-4" alt="Sapphire Admin Dashboard" />
+		.inputs {
+			display: grid;
+			grid-template-columns: repeat(6, 1fr);
+			/* grid-template-rows: repeat(2); */
+
+			column-gap: 5px;
+			grid-template-areas:
+				" a a a b b . "
+				" a b c c . . ";
+		}
+
+		/* table 과 엮여있는 js 부분  */
+		.pagination {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		/* 이 파일 html 내에서만 적용 */
+		.btn btn-success {
+			float: left;
+		}
+
+		.btn btn-success2 {
+			float: right;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- Page wrapper start -->
+	<div class="page-wrapper">
+
+		<!-- Page header starts -->
+		<div class="page-header">
+
+			<!-- Sidebar brand starts -->
+			<div class="brand">
+				<a href="index.html" class="logo">
+					<img src="assets/images/logo.svg" class="d-none d-md-block me-4" alt="Sapphire Admin Dashboard" />
+					<img src="assets/images/logo-sm.svg" class="d-block d-md-none me-4"
+						alt="Sapphire Admin Dashboard" />
+				</a>
+			</div>
+			<!-- Sidebar brand ends -->
+
+			<div class="toggle-sidebar" id="toggle-sidebar">
+				<i class="bi bi-list"></i>
+			</div>
+
+			<!-- Header actions ccontainer start -->
+			<div class="header-actions-container">
+
+				<!-- Search container start -->
+				<div class="search-container me-4 d-xl-block d-lg-none">
+
+					<!-- Search input group start -->
+					<input type="text" class="form-control" placeholder="Search" />
+					<!-- Search input group end -->
+
+				</div>
+				<!-- Search container end -->
+
+				<!-- Header actions start -->
+				<div class="header-actions d-xl-flex d-lg-none gap-4">
+					<div class="dropdown">
+						<a class="dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown"
+							aria-expanded="false">
+							<i class="bi bi-envelope-open fs-5 lh-1"></i>
+							<span class="count-label"></span>
+						</a>
+						<div class="dropdown-menu dropdown-menu-end shadow-lg">
+							<div class="dropdown-item">
+								<div class="d-flex py-2 border-bottom">
+									<img src="assets/images/user.png" class="img-3x me-3 rounded-3"
+										alt="Admin Dashboards" />
+									<div class="m-0">
+										<h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
+										<p class="mb-1">Membership has been ended.</p>
+										<p class="small m-0 text-secondary">Today, 07:30pm</p>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="d-flex py-2 border-bottom">
+									<img src="assets/images/user2.png" class="img-3x me-3 rounded-3"
+										alt="Admin Dashboards" />
+									<div class="m-0">
+										<h6 class="mb-1 fw-semibold">Benjamin Michiels</h6>
+										<p class="mb-1">Congratulate, James for new job.</p>
+										<p class="small m-0 text-secondary">Today, 08:00pm</p>
+									</div>
+								</div>
+							</div>
+							<div class="dropdown-item">
+								<div class="d-flex py-2">
+									<img src="assets/images/user1.png" class="img-3x me-3 rounded-3"
+										alt="Admin Dashboards" />
+									<div class="m-0">
+										<h6 class="mb-1 fw-semibold">Jehovah Roy</h6>
+										<p class="mb-1">Lewis added new schedule release.</p>
+										<p class="small m-0 text-secondary">Today, 09:30pm</p>
+									</div>
+								</div>
+							</div>
+							<div class="d-grid mx-3 my-1">
+								<a href="javascript:void(0)" class="btn btn-primary">View all</a>
+							</div>
+						</div>
+					</div>
+					<a href="account-settings.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
+						data-bs-custom-class="custom-tooltip-blue" data-bs-title="Settings">
+						<i class="bi bi-gear fs-5"></i>
 					</a>
 				</div>
-				<!-- Sidebar brand ends -->
+				<!-- Header actions start -->
 
-				<div class="toggle-sidebar" id="toggle-sidebar">
-					<i class="bi bi-list"></i>
-				</div>
-
-				<!-- Header actions ccontainer start -->
-				<div class="header-actions-container">
-
-					<!-- Search container start -->
-					<div class="search-container me-4 d-xl-block d-lg-none">
-
-						<!-- Search input group start -->
-						<input type="text" class="form-control" placeholder="Search" />
-						<!-- Search input group end -->
-
-					</div>
-					<!-- Search container end -->
-
-					<!-- Header actions start -->
-					<div class="header-actions d-xl-flex d-lg-none gap-4">
-						<div class="dropdown">
-							<a class="dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-								<i class="bi bi-envelope-open fs-5 lh-1"></i>
-								<span class="count-label"></span>
-							</a>
-							<div class="dropdown-menu dropdown-menu-end shadow-lg">
-								<div class="dropdown-item">
-									<div class="d-flex py-2 border-bottom">
-										<img src="assets/images/user.png" class="img-3x me-3 rounded-3" alt="Admin Dashboards" />
-										<div class="m-0">
-											<h6 class="mb-1 fw-semibold">Sophie Michiels</h6>
-											<p class="mb-1">Membership has been ended.</p>
-											<p class="small m-0 text-secondary">Today, 07:30pm</p>
-										</div>
-									</div>
-								</div>
-								<div class="dropdown-item">
-									<div class="d-flex py-2 border-bottom">
-										<img src="assets/images/user2.png" class="img-3x me-3 rounded-3" alt="Admin Dashboards" />
-										<div class="m-0">
-											<h6 class="mb-1 fw-semibold">Benjamin Michiels</h6>
-											<p class="mb-1">Congratulate, James for new job.</p>
-											<p class="small m-0 text-secondary">Today, 08:00pm</p>
-										</div>
-									</div>
-								</div>
-								<div class="dropdown-item">
-									<div class="d-flex py-2">
-										<img src="assets/images/user1.png" class="img-3x me-3 rounded-3" alt="Admin Dashboards" />
-										<div class="m-0">
-											<h6 class="mb-1 fw-semibold">Jehovah Roy</h6>
-											<p class="mb-1">Lewis added new schedule release.</p>
-											<p class="small m-0 text-secondary">Today, 09:30pm</p>
-										</div>
-									</div>
-								</div>
-								<div class="d-grid mx-3 my-1">
-									<a href="javascript:void(0)" class="btn btn-primary">View all</a>
-								</div>
-							</div>
-						</div>
-						<a href="account-settings.html" data-bs-toggle="tooltip" data-bs-placement="bottom"
-							data-bs-custom-class="custom-tooltip-blue" data-bs-title="Settings">
-							<i class="bi bi-gear fs-5"></i>
+				<!-- Header profile start -->
+				<div class="header-profile d-flex align-items-center">
+					<div class="dropdown">
+						<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+							<span class="user-name d-none d-md-block">Michelle White</span>
+							<span class="avatar">
+								<img src="assets/images/user2.png" alt="Admin Templates" />
+								<span class="status online"></span>
+							</span>
 						</a>
-					</div>
-					<!-- Header actions start -->
-
-					<!-- Header profile start -->
-					<div class="header-profile d-flex align-items-center">
-						<div class="dropdown">
-							<a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
-								<span class="user-name d-none d-md-block">Michelle White</span>
-								<span class="avatar">
-									<img src="assets/images/user2.png" alt="Admin Templates" />
-									<span class="status online"></span>
-								</span>
-							</a>
-							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="userSettings">
-								<div class="header-profile-actions">
-									<a href="profile.html">Profile</a>
-									<a href="account-settings.html">Settings</a>
-									<a href="login.html">Logout</a>
-								</div>
+						<div class="dropdown-menu dropdown-menu-end" aria-labelledby="userSettings">
+							<div class="header-profile-actions">
+								<a href="profile.html">Profile</a>
+								<a href="account-settings.html">Settings</a>
+								<a href="login.html">Logout</a>
 							</div>
 						</div>
 					</div>
-					<!-- Header profile end -->
-
 				</div>
-				<!-- Header actions ccontainer end -->
+				<!-- Header profile end -->
 
 			</div>
-			<!-- Page header ends -->
+			<!-- Header actions ccontainer end -->
 
-			<!-- Main container start -->
-			<div class="main-container">
+		</div>
+		<!-- Page header ends -->
 
-				<!-- Sidebar wrapper start -->
-				<nav class="sidebar-wrapper">
+		<!-- Main container start -->
+		<div class="main-container">
 
-					<!-- Sidebar menu starts -->
-					<div class="sidebar-menu">
-						<div class="sidebarMenuScroll">
-							<ul>
-								<li>
-									<a href="index.html">
-										<i class="bi bi-bar-chart-line"></i>
-										<span class="menu-text">Analytics</span>
-									</a>
-								</li>
-								<li>
-									<a href="widgets.html">
-										<i class="bi bi-cup"></i>
-										<span class="menu-text">Widgets</span>
-									</a>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-globe"></i>
-										<span class="menu-text">UI Kit</span>
-										<span class="badge red">15</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="accordions.html">Accordions</a>
-											</li>
-											<li>
-												<a href="alerts.html">Alerts</a>
-											</li>
-											<li>
-												<a href="buttons.html">Buttons</a>
-											</li>
-											<li>
-												<a href="badges.html">Badges</a>
-											</li>
-											<li>
-												<a href="cards.html">Cards</a>
-											</li>
-											<li>
-												<a href="advanced-cards.html">Advanced Cards</a>
-											</li>
-											<li>
-												<a href="carousel.html">Carousel</a>
-											</li>
-											<li>
-												<a href="dropdowns.html">Dropdowns</a>
-											</li>
-											<li>
-												<a href="icons.html">Icons</a>
-											</li>
-											<li>
-												<a href="list-items.html">List Items</a>
-											</li>
-											<li>
-												<a href="modals.html">Modals</a>
-											</li>
-											<li>
-												<a href="offcanvas.html">Off Canvas</a>
-											</li>
-											<li>
-												<a href="progress.html">Progress Bars</a>
-											</li>
-											<li>
-												<a href="spinners.html">Spinners</a>
-											</li>
-											<li>
-												<a href="tabs.html">Tabs</a>
-											</li>
-											<li>
-												<a href="tooltips.html">Tooltips</a>
-											</li>
-											<li>
-												<a href="typography.html">Typography</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<a href="events.html">
-										<i class="bi bi-layout-text-sidebar"></i>
-										<span class="menu-text">Events</span>
-									</a>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-stickies"></i>
-										<span class="menu-text">Pages</span>
-										<span class="badge blue">8</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="create-invoice.html">Create Invoice</a>
-											</li>
-											<li>
-												<a href="view-invoice.html">View Invoice</a>
-											</li>
-											<li>
-												<a href="invoice-list.html">Invoice List</a>
-											</li>
-											<li>
-												<a href="subscribers.html">Subscribers</a>
-											</li>
-											<li>
-												<a href="contacts.html">Contacts</a>
-											</li>
-											<li>
-												<a href="pricing.html">Pricing</a>
-											</li>
-											<li>
-												<a href="profile.html">Profile</a>
-											</li>
-											<li>
-												<a href="account-settings.html">Account Settings</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-calendar4"></i>
-										<span class="menu-text">Calendars</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="calendar.html">Daygrid</a>
-											</li>
-											<li>
-												<a href="calendar-draggable.html">External Draggable</a>
-											</li>
-											<li>
-												<a href="calendar-google.html">Google Calendar</a>
-											</li>
-											<li>
-												<a href="calendar-list-view.html">List View</a>
-											</li>
-											<li>
-												<a href="calendar-selectable.html">Selectable</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-columns-gap"></i>
-										<span class="menu-text">Forms</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="form-inputs.html">Form Inputs</a>
-											</li>
-											<li>
-												<a href="form-checkbox-radio.html">Checkbox &amp; Radio</a>
-											</li>
-											<li>
-												<a href="form-file-input.html">File Input</a>
-											</li>
-											<li>
-												<a href="form-validations.html">Validations</a>
-											</li>
-											<li>
-												<a href="date-time-pickers.html">Date Time Pickers</a>
-											</li>
-											<li>
-												<a href="input-mask.html">Input Masks</a>
-											</li>
-											<li>
-												<a href="form-layouts.html">Form Layouts</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<a href="tables.html">
-										<i class="bi bi-grid-3x3"></i>
-										<span class="menu-text">Tables</span>
-									</a>
-								</li>
-								<li class="active-page-link">
-									<a href="data-tables.html">
-										<i class="bi bi-grid-3x3-gap"></i>
-										<span class="menu-text">Data Tables</span>
-									</a>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-map"></i>
-										<span class="menu-text">Graphs &amp; Maps</span>
-										<span class="badge green">15</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="apex.html">Apex</a>
-											</li>
-											<li>
-												<a href="morris.html">Morris</a>
-											</li>
-											<li>
-												<a href="maps.html">Maps</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li class="sidebar-dropdown">
-									<a href="#">
-										<i class="bi bi-layout-sidebar"></i>
-										<span class="menu-text">Layouts</span>
-									</a>
-									<div class="sidebar-submenu">
-										<ul>
-											<li>
-												<a href="layout.html">Default Layout</a>
-											</li>
-											<li>
-												<a href="layout-grid.html">Grid Layout</a>
-											</li>
-											<li>
-												<a href="layout-mega-menu.html">Mega Menu</a>
-											</li>
-											<li>
-												<a href="layout-full-screen.html">Full Screen</a>
-											</li>
-											<li>
-												<a href="hero-header.html">Hero Header</a>
-											</li>
-											<li>
-												<a href="layout-datepicker.html">Layout Datepicker</a>
-											</li>
-											<li>
-												<a href="layout-welcome.html">Welcome Layout</a>
-											</li>
-										</ul>
-									</div>
-								</li>
-								<li>
-									<a href="login.html">
-										<i class="bi bi-shield-lock"></i>
-										<span class="menu-text">Login</span>
-									</a>
-								</li>
-								<li>
-									<a href="signup.html">
-										<i class="bi bi-unlock"></i>
-										<span class="menu-text">Signup</span>
-									</a>
-								</li>
-								<li>
-									<a href="forgot-password.html">
-										<i class="bi bi-emoji-expressionless"></i>
-										<span class="menu-text">Forgot Password</span>
-									</a>
-								</li>
-								<li>
-									<a href="error.html">
-										<i class="bi bi-exclamation-triangle"></i>
-										<span class="menu-text">Error</span>
-									</a>
-								</li>
-								<li>
-									<a href="maintenance.html">
-										<i class="bi bi-exclamation-octagon"></i>
-										<span class="menu-text">Maintenance</span>
-									</a>
-								</li>
-								<li>
-									<a href="support.html">
-										<i class="bi bi-code-square"></i>
-										<span class="menu-text">Support</span>
-									</a>
-								</li>
-							</ul>
-						</div>
+			<!-- Sidebar wrapper start -->
+			<nav class="sidebar-wrapper">
+
+				<!-- Sidebar menu starts -->
+				<div class="sidebar-menu">
+					<div class="sidebarMenuScroll">
+						<ul>
+							<li>
+								<a href="index.html">
+									<i class="bi bi-bar-chart-line"></i>
+									<span class="menu-text">Analytics</span>
+								</a>
+							</li>
+							<li>
+								<a href="widgets.html">
+									<i class="bi bi-cup"></i>
+									<span class="menu-text">Widgets</span>
+								</a>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-globe"></i>
+									<span class="menu-text">UI Kit</span>
+									<span class="badge red">15</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="accordions.html">Accordions</a>
+										</li>
+										<li>
+											<a href="alerts.html">Alerts</a>
+										</li>
+										<li>
+											<a href="buttons.html">Buttons</a>
+										</li>
+										<li>
+											<a href="badges.html">Badges</a>
+										</li>
+										<li>
+											<a href="cards.html">Cards</a>
+										</li>
+										<li>
+											<a href="advanced-cards.html">Advanced Cards</a>
+										</li>
+										<li>
+											<a href="carousel.html">Carousel</a>
+										</li>
+										<li>
+											<a href="dropdowns.html">Dropdowns</a>
+										</li>
+										<li>
+											<a href="icons.html">Icons</a>
+										</li>
+										<li>
+											<a href="list-items.html">List Items</a>
+										</li>
+										<li>
+											<a href="modals.html">Modals</a>
+										</li>
+										<li>
+											<a href="offcanvas.html">Off Canvas</a>
+										</li>
+										<li>
+											<a href="progress.html">Progress Bars</a>
+										</li>
+										<li>
+											<a href="spinners.html">Spinners</a>
+										</li>
+										<li>
+											<a href="tabs.html">Tabs</a>
+										</li>
+										<li>
+											<a href="tooltips.html">Tooltips</a>
+										</li>
+										<li>
+											<a href="typography.html">Typography</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="events.html">
+									<i class="bi bi-layout-text-sidebar"></i>
+									<span class="menu-text">Events</span>
+								</a>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-stickies"></i>
+									<span class="menu-text">Pages</span>
+									<span class="badge blue">8</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="create-invoice.html">Create Invoice</a>
+										</li>
+										<li>
+											<a href="view-invoice.html">View Invoice</a>
+										</li>
+										<li>
+											<a href="invoice-list.html">Invoice List</a>
+										</li>
+										<li>
+											<a href="subscribers.html">Subscribers</a>
+										</li>
+										<li>
+											<a href="contacts.html">Contacts</a>
+										</li>
+										<li>
+											<a href="pricing.html">Pricing</a>
+										</li>
+										<li>
+											<a href="profile.html">Profile</a>
+										</li>
+										<li>
+											<a href="account-settings.html">Account Settings</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-calendar4"></i>
+									<span class="menu-text">Calendars</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="calendar.html">Daygrid</a>
+										</li>
+										<li>
+											<a href="calendar-draggable.html">External Draggable</a>
+										</li>
+										<li>
+											<a href="calendar-google.html">Google Calendar</a>
+										</li>
+										<li>
+											<a href="calendar-list-view.html">List View</a>
+										</li>
+										<li>
+											<a href="calendar-selectable.html">Selectable</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-columns-gap"></i>
+									<span class="menu-text">Forms</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="form-inputs.html">Form Inputs</a>
+										</li>
+										<li>
+											<a href="form-checkbox-radio.html">Checkbox &amp; Radio</a>
+										</li>
+										<li>
+											<a href="form-file-input.html">File Input</a>
+										</li>
+										<li>
+											<a href="form-validations.html">Validations</a>
+										</li>
+										<li>
+											<a href="date-time-pickers.html">Date Time Pickers</a>
+										</li>
+										<li>
+											<a href="input-mask.html">Input Masks</a>
+										</li>
+										<li>
+											<a href="form-layouts.html">Form Layouts</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="tables.html">
+									<i class="bi bi-grid-3x3"></i>
+									<span class="menu-text">Tables</span>
+								</a>
+							</li>
+							<li class="active-page-link">
+								<a href="data-tables.html">
+									<i class="bi bi-grid-3x3-gap"></i>
+									<span class="menu-text">Data Tables</span>
+								</a>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-map"></i>
+									<span class="menu-text">Graphs &amp; Maps</span>
+									<span class="badge green">15</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="apex.html">Apex</a>
+										</li>
+										<li>
+											<a href="morris.html">Morris</a>
+										</li>
+										<li>
+											<a href="maps.html">Maps</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li class="sidebar-dropdown">
+								<a href="#">
+									<i class="bi bi-layout-sidebar"></i>
+									<span class="menu-text">Layouts</span>
+								</a>
+								<div class="sidebar-submenu">
+									<ul>
+										<li>
+											<a href="layout.html">Default Layout</a>
+										</li>
+										<li>
+											<a href="layout-grid.html">Grid Layout</a>
+										</li>
+										<li>
+											<a href="layout-mega-menu.html">Mega Menu</a>
+										</li>
+										<li>
+											<a href="layout-full-screen.html">Full Screen</a>
+										</li>
+										<li>
+											<a href="hero-header.html">Hero Header</a>
+										</li>
+										<li>
+											<a href="layout-datepicker.html">Layout Datepicker</a>
+										</li>
+										<li>
+											<a href="layout-welcome.html">Welcome Layout</a>
+										</li>
+									</ul>
+								</div>
+							</li>
+							<li>
+								<a href="login.html">
+									<i class="bi bi-shield-lock"></i>
+									<span class="menu-text">Login</span>
+								</a>
+							</li>
+							<li>
+								<a href="signup.html">
+									<i class="bi bi-unlock"></i>
+									<span class="menu-text">Signup</span>
+								</a>
+							</li>
+							<li>
+								<a href="forgot-password.html">
+									<i class="bi bi-emoji-expressionless"></i>
+									<span class="menu-text">Forgot Password</span>
+								</a>
+							</li>
+							<li>
+								<a href="error.html">
+									<i class="bi bi-exclamation-triangle"></i>
+									<span class="menu-text">Error</span>
+								</a>
+							</li>
+							<li>
+								<a href="maintenance.html">
+									<i class="bi bi-exclamation-octagon"></i>
+									<span class="menu-text">Maintenance</span>
+								</a>
+							</li>
+							<li>
+								<a href="support.html">
+									<i class="bi bi-code-square"></i>
+									<span class="menu-text">Support</span>
+								</a>
+							</li>
+						</ul>
 					</div>
-					<!-- Sidebar menu ends -->
+				</div>
+				<!-- Sidebar menu ends -->
+			</nav>
+			<!-- Sidebar wrapper end -->
 
-				</nav>
-				<!-- Sidebar wrapper end -->
+			<!-- Content wrapper scroll start -->
+			<div class="content-wrapper-scroll">
+				<p class="content-text-color">page 1</p> > <p class="content-text-color">page 2</p> > Defualt
+				<div>
+					<h2><b>Code</b></h2>
+				</div>
+				<div class="inputs">
+					<label class="form-label">
+						<select class="form-select" aria-label="Default select example">
+							<option selected="">N</option>
+							<option value="1">N1</option>
+							<option value="2">N2</option>
+							<option value="3">N3</option>
+						</select>
+					</label>
+					<label class="form-label">
+						<select class="form-select" aria-label="Default select example">
+							<option selected="">Y</option>
+							<option value="1">Y1</option>
+							<option value="2">Y2</option>
+							<option value="3">Y3</option>
+						</select>
+					</label>
+					<label class="form-label">
+						<select class="form-select" aria-label="Default select example">
+							<option selected="">수정일</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+						</select>
+					</label>
+					<label class="form-label">
+						<input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting">
+					</label>
+					<label class="form-label">
+						<input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting">
+					</label>
+					<!-- 검색부분 2개 영역 부분 -->
+					<label class="form-label">
+						<select class="form-select" aria-label="Default select example">
+							<option selected="" class="">검색구분</option>
+							<option value="1">검색1</option>
+							<option value="2">검색2</option>
+							<option value="3">검색3</option>
+						</select>
+					</label>
+					<label class="form-label">
+						<input type="text" class="form-control" placeholder="검색어" id="date-formatting">
+					</label>
+					<!-- 아이콘 부분 -->
+					<label class="form-label">
+						<button type="button" class="btn btn-outline-secondary">
+							<div class="icon">
+								<i class="bi bi-search"></i>
+							</div>
+						</button>
+					</label>
+					<label class="form-label">
+						<button type="button" class="btn btn-outline-secondary">
+							<div class="icon">
+								<i class="bi bi-arrow-clockwise"></i>
+							</div>
+						</button>
+					</label>
+				</div>
 
-				<!-- Content wrapper scroll start -->
-				<div class="content-wrapper-scroll">
-                    <p class="content-text-color">page 1</p> > <p class="content-text-color">page 2</p> > Defualt
-						<div><h2><b>Code</b></h2></div>
-                    <div class="inputs">
-                        <label class="form-label"> 
-                            <select class="form-select" aria-label="Default select example"> 
-                                <option selected="">N</option> 
-                                <option value="1">N1</option> 
-                                <option value="2">N2</option> 
-                                <option value="3">N3</option> 
-                            </select> 
-                        </label> 
-                        <label class="form-label"> 
-                            <select class="form-select" aria-label="Default select example"> 
-                                <option selected="">Y</option> 
-                                <option value="1">Y1</option> 
-                                <option value="2">Y2</option> 
-                                <option value="3">Y3</option> 
-                            </select>
-                        </label>
-                        <label class="form-label">
-                            <select class="form-select" aria-label="Default select example"> 
-                                <option selected="">수정일</option> 
-                                <option value="1">1</option> 
-                                <option value="2">2</option> 
-                                <option value="3">3</option> 
-                            </select> 
-                        </label> 
-                        <input type="text" class="form-control" placeholder="2024-06-05" id="date-formatting"> 
-                        <input type="text" class="form-control" placeholder="2024-07-05" id="date-formatting"> 
-                        <label class="form-label"> 
-                            <select class="form-select" aria-label="Default select example"> 
-                                <option selected="">검색구분</option> 
-                                <option value="1">검색1</option> 
-                                <option value="2">검색2</option> 
-                                <option value="3">검색3</option> 
-                            </select> 
-                        </label>
-                        <input type="text" class="form-control" placeholder="검색어" id="date-formatting">
-                        <button type="button" class="btn btn-outline-secondary"> 
-                            <div class="icon"> 
-                                <i class="bi bi-search"></i> 
-                            </div> 
-                        </button> 
-                        <button type="button" class="btn btn-outline-secondary"> 
-                            <div class="icon"> 
-                                <i class="bi bi-arrow-clockwise"></i> 
-                            </div>
-                        </button>
-                    </div>
-
-					<!-- Main header starts -->
-					<!-- <div class="main-header d-flex align-items-center justify-content-between position-relative">
+				<!-- Main header starts -->
+				<!-- <div class="main-header d-flex align-items-center justify-content-between position-relative">
 						<div class="d-flex align-items-center justify-content-center">
 							<div class="page-icon">
 								<i class="bi bi-window-split"></i>
@@ -505,8 +567,8 @@
 								<h5>Data Tables</h5>
 							</div>
 						</div> -->
-						<!-- Live updates start -->
-						<!-- <ul class="updates d-flex align-items-end flex-column overflow-hidden" id="updates">
+				<!-- Live updates start -->
+				<!-- <ul class="updates d-flex align-items-end flex-column overflow-hidden" id="updates">
 							<li>
 								<a href="javascript:void(0)">
 									<i class="bi bi-envelope-paper text-red font-1x me-2"></i>
@@ -526,441 +588,548 @@
 								</a>
 							</li>
 						</ul> -->
-						<!-- Live updates end -->
-					</div>
-					<!-- Main header ends -->
+				<!-- Live updates end -->
+			</div>
+			<!-- Main header ends -->
 
-					<!-- Content wrapper start -->
-					<!-- <div class="content-wrapper"> -->
+			<!-- Content wrapper start -->
+			<!-- <div class="content-wrapper"> -->
 
-						<!-- Row start -->
-						<div class="row gx-3">
-							<div class="col-sm-12 col-12">
-								<!-- Card start -->
-								<div class="card">
-									<div class="card-header">
-										<div class="card-title">Total: 171</div>
-									</div>
-									<div class="card-body">
-										<div class="table-responsive">
-											<table id="highlightRowColumn" class="table custom-table">
-												<thead>
-													<tr>
-														<th><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div>
-														</th>
-														<th>#</th>
-														<th>코드그룹 코드</th>
-														<th>코드그룹 이름</th>
-														<th>코드</th>
-														<th>대체 코드</th>
-														<th>코드 이름</th>
-														<th>코드 이름(영문)</th>
-														<th>사용</th>
-														<th>순서</th>
-														<th>등록일</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>161</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>253</td>
-														<td></td>
-														<td>인간</td>
-														<td></td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>160</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>254</td>
-														<td></td>
-														<td>전기</td>
-														<td></td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>159</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>248</td>
-														<td></td>
-														<td>클린처</td>
-														<td>Clincher</td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>158</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>249</td>
-														<td></td>
-														<td>튜브리스</td>
-														<td>Tubeless</td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>157</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>250</td>
-														<td></td>
-														<td>튜블러</td>
-														<td>Tubular</td>
-														<td>Y</td>
-														<td>3</td>
-														<td></td>
-													</tr><tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>161</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>253</td>
-														<td></td>
-														<td>인간</td>
-														<td></td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>160</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>254</td>
-														<td></td>
-														<td>전기</td>
-														<td></td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>159</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>248</td>
-														<td></td>
-														<td>클린처</td>
-														<td>Clincher</td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>158</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>249</td>
-														<td></td>
-														<td>튜브리스</td>
-														<td>Tubeless</td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>157</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>250</td>
-														<td></td>
-														<td>튜블러</td>
-														<td>Tubular</td>
-														<td>Y</td>
-														<td>3</td>
-														<td></td>
-													</tr><tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>161</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>253</td>
-														<td></td>
-														<td>인간</td>
-														<td></td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>160</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>254</td>
-														<td></td>
-														<td>전기</td>
-														<td></td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>159</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>248</td>
-														<td></td>
-														<td>클린처</td>
-														<td>Clincher</td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>158</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>249</td>
-														<td></td>
-														<td>튜브리스</td>
-														<td>Tubeless</td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>157</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>250</td>
-														<td></td>
-														<td>튜블러</td>
-														<td>Tubular</td>
-														<td>Y</td>
-														<td>3</td>
-														<td></td>
-													</tr><tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>161</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>253</td>
-														<td></td>
-														<td>인간</td>
-														<td></td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>160</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>254</td>
-														<td></td>
-														<td>전기</td>
-														<td></td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>159</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>248</td>
-														<td></td>
-														<td>클린처</td>
-														<td>Clincher</td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>158</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>249</td>
-														<td></td>
-														<td>튜브리스</td>
-														<td>Tubeless</td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>157</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>250</td>
-														<td></td>
-														<td>튜블러</td>
-														<td>Tubular</td>
-														<td>Y</td>
-														<td>3</td>
-														<td></td>
-													</tr><tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>161</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>253</td>
-														<td></td>
-														<td>인간</td>
-														<td></td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>160</td>
-														<td>29</td>
-														<td>물,자전거,구동방식</td>
-														<td>254</td>
-														<td></td>
-														<td>전기</td>
-														<td></td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>159</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>248</td>
-														<td></td>
-														<td>클린처</td>
-														<td>Clincher</td>
-														<td>Y</td>
-														<td>1</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>158</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>249</td>
-														<td></td>
-														<td>튜브리스</td>
-														<td>Tubeless</td>
-														<td>Y</td>
-														<td>2</td>
-														<td></td>
-													</tr>
-													<tr>
-														<td><div class="form-check">
-															<input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-															<label class="form-check-label" for="flexCheckChecked">
-															</label></div></td>
-														<td>157</td>
-														<td>28</td>
-														<td>물,자전거,타이어</td>
-														<td>250</td>
-														<td></td>
-														<td>튜블러</td>
-														<td>Tubular</td>
-														<td>Y</td>
-														<td>3</td>
-														<td></td>
-													</tr>
-													<!-- <tr>
+			<!-- Row start -->
+			<div class="row gx-3">
+				<div class="col-sm-12 col-12">
+					<!-- Card start -->
+					<div class="card">
+						<div class="card-header">
+							<div class="card-title">Total: 171</div>
+						</div>
+						<div class="card-body">
+							<div class="table-responsive">
+								<table id="highlightRowColumn" class="table custom-table">
+									<thead>
+										<tr>
+											<th>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</th>
+											<th>#</th>
+											<th>코드그룹 코드</th>
+											<th>코드그룹 이름</th>
+											<th>코드</th>
+											<th>대체 코드</th>
+											<th>코드 이름</th>
+											<th>코드 이름(영문)</th>
+											<th>사용</th>
+											<th>순서</th>
+											<th>등록일</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>161</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>253</td>
+											<td></td>
+											<td>인간</td>
+											<td></td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>160</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>254</td>
+											<td></td>
+											<td>전기</td>
+											<td></td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>159</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>248</td>
+											<td></td>
+											<td>클린처</td>
+											<td>Clincher</td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>158</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>249</td>
+											<td></td>
+											<td>튜브리스</td>
+											<td>Tubeless</td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>157</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>250</td>
+											<td></td>
+											<td>튜블러</td>
+											<td>Tubular</td>
+											<td>Y</td>
+											<td>3</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>161</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>253</td>
+											<td></td>
+											<td>인간</td>
+											<td></td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>160</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>254</td>
+											<td></td>
+											<td>전기</td>
+											<td></td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>159</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>248</td>
+											<td></td>
+											<td>클린처</td>
+											<td>Clincher</td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>158</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>249</td>
+											<td></td>
+											<td>튜브리스</td>
+											<td>Tubeless</td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>157</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>250</td>
+											<td></td>
+											<td>튜블러</td>
+											<td>Tubular</td>
+											<td>Y</td>
+											<td>3</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>161</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>253</td>
+											<td></td>
+											<td>인간</td>
+											<td></td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>160</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>254</td>
+											<td></td>
+											<td>전기</td>
+											<td></td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>159</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>248</td>
+											<td></td>
+											<td>클린처</td>
+											<td>Clincher</td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>158</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>249</td>
+											<td></td>
+											<td>튜브리스</td>
+											<td>Tubeless</td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>157</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>250</td>
+											<td></td>
+											<td>튜블러</td>
+											<td>Tubular</td>
+											<td>Y</td>
+											<td>3</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>161</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>253</td>
+											<td></td>
+											<td>인간</td>
+											<td></td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>160</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>254</td>
+											<td></td>
+											<td>전기</td>
+											<td></td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>159</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>248</td>
+											<td></td>
+											<td>클린처</td>
+											<td>Clincher</td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>158</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>249</td>
+											<td></td>
+											<td>튜브리스</td>
+											<td>Tubeless</td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>157</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>250</td>
+											<td></td>
+											<td>튜블러</td>
+											<td>Tubular</td>
+											<td>Y</td>
+											<td>3</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>161</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>253</td>
+											<td></td>
+											<td>인간</td>
+											<td></td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>160</td>
+											<td>29</td>
+											<td>물,자전거,구동방식</td>
+											<td>254</td>
+											<td></td>
+											<td>전기</td>
+											<td></td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>159</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>248</td>
+											<td></td>
+											<td>클린처</td>
+											<td>Clincher</td>
+											<td>Y</td>
+											<td>1</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>158</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>249</td>
+											<td></td>
+											<td>튜브리스</td>
+											<td>Tubeless</td>
+											<td>Y</td>
+											<td>2</td>
+											<td></td>
+										</tr>
+										<tr>
+											<td>
+												<div class="form-check">
+													<input class="form-check-input" type="checkbox" value=""
+														id="flexCheckChecked" checked>
+													<label class="form-check-label" for="flexCheckChecked">
+													</label>
+												</div>
+											</td>
+											<td>157</td>
+											<td>28</td>
+											<td>물,자전거,타이어</td>
+											<td>250</td>
+											<td></td>
+											<td>튜블러</td>
+											<td>Tubular</td>
+											<td>Y</td>
+											<td>3</td>
+											<td></td>
+										</tr>
+										<!-- <tr>
 														<td>Brielle Williamson</td>
 														<td>Integration Specialist</td>
 														<td>New York</td>
@@ -984,7 +1153,7 @@
 														<td>2010/10/14</td>
 														<td>$327,900</td>
 													</tr> -->
-													<!-- <tr>
+										<!-- <tr>
 														<td>Colleen Hurst</td>
 														<td>Javascript Developer</td>
 														<td>San Francisco</td>
@@ -1376,35 +1545,53 @@
 														<td>2011/01/25</td>
 														<td>$112,000</td>
 													</tr> -->
-												</tbody>
-											</table>
-                                            <button type="button" class="btn btn-success">
-                                                <div class="icon">
-                                                    <i class="bi bi-x"></i>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-success">
-                                            <div class="icon">
-                                                <i class="bi bi-trash"></i>
-                                            </div>
-                                            </button>
-                                            <button type="button" class="btn btn-success2">
-                                                <div class="icon">
-                                                    <i class="bi bi-file-earmark-excel-fill"></i>
-                                                </div>
-                                            </button>
-                                            <button type="button" class="btn btn-success3">
-                                                <div class="icon">
-                                                    <i class="bi bi-plus-lg" style="color: white;"></i>
-                                                </div>
-                                            </button>
-										</div>
+									</tbody>
+								</table>
+								<nav aria-label="...">
+									<ul class="pagination">
+										<li class="page-item"><a class="page-link" href="#">1</a></li>
+										<li class="page-item active" aria-current="page">
+											<a class="page-link" href="#">2</a>
+										</li>
+										<li class="page-item"><a class="page-link" href="#">3</a></li>
+										<li class="page-item">
+											<a class="page-link" href="#">4</a>
+										</li>
+										<li class="page-item">
+											<a class="page-link" href="#">5</a>
+										</li>
+										<li class="page-item disabled">
+											<a class="page-link" href="#" tabindex="-1" aria-disabled="true">></a>
+										</li>
+									</ul>
+								</nav>
+								<button type="button" class="btn btn-success">
+									<div class="icon">
+										<i class="bi bi-x"></i>
 									</div>
-								</div>
-								<!-- Card end -->
+								</button>
+								<button type="button" class="btn btn-success">
+									<div class="icon">
+										<i class="bi bi-trash"></i>
+									</div>
+								</button>
+								<button type="button" class="btn btn-success2">
+									<div class="icon">
+										<i class="bi bi-file-earmark-excel-fill"></i>
+									</div>
+								</button>
+								<button type="button" class="btn btn-success3">
+									<div class="icon">
+										<i class="bi bi-plus-lg" style="color: white;"></i>
+									</div>
+								</button>
+							</div>
+						</div>
+					</div>
+					<!-- Card end -->
 
-								<!-- Card start -->
-								<!-- <div class="card">
+					<!-- Card start -->
+					<!-- <div class="card">
 									<div class="card-header">
 										<div class="card-title">Simple Data Table</div>
 									</div>
@@ -1883,10 +2070,10 @@
 										</div>
 									</div>
 								</div> -->
-								<!-- Card end -->
+					<!-- Card end -->
 
-								<!-- Card start -->
-								<!-- <div class="card">
+					<!-- Card start -->
+					<!-- <div class="card">
 									<div class="card-header">
 										<div class="card-title">Vertical Scroll</div>
 									</div>
@@ -2365,10 +2552,10 @@
 										</div>
 									</div>
 								</div> -->
-								<!-- Card end -->
+					<!-- Card end -->
 
-								<!-- Card start -->
-								<!-- <div class="card">
+					<!-- Card start -->
+					<!-- <div class="card">
 									<div class="card-header">
 										<div class="card-title">API Call Backs</div>
 									</div>
@@ -2847,10 +3034,10 @@
 										</div>
 									</div>
 								</div> -->
-								<!-- Card end -->
+					<!-- Card end -->
 
-								<!-- Card start -->
-								<!-- <div class="card">
+					<!-- Card start -->
+					<!-- <div class="card">
 									<div class="card-header">
 										<div class="card-title">No Search Field</div>
 									</div>
@@ -3329,8 +3516,8 @@
 										</div>
 									</div>
 								</div> -->
-								<!-- Card end -->
-									<ul class="pagination justify-content-end">
+					<!-- Card end -->
+					<!-- <ul class="pagination justify-content-end">
 									  <li class="page-item disabled">
 										<a class="page-link" href="#" tabindex="-1">Previous</a>
 									  </li>
@@ -3341,57 +3528,57 @@
 										<a class="page-link" href="#">Next</a>
 									  </li>
 									</ul>
-								  </nav>
-							</div>
-						</div>
-						<!-- Row end -->
-
-					<!-- </div> -->
-					<!-- Content wrapper end -->
-
+								  </nav> -->
 				</div>
-				<!-- Content wrapper scroll end -->
-
-				<!-- App Footer start -->
-				<div class="app-footer">
-					<span>Copyright 2024. Bae Junghwan all rights reserved.</span>
-				</div>
-				<!-- App footer end -->
-
 			</div>
-			<!-- Main container end -->
+			<!-- Row end -->
+
+			<!-- </div> -->
+			<!-- Content wrapper end -->
 
 		</div>
-		<!-- Page wrapper end -->
+		<!-- Content wrapper scroll end -->
 
-		<!-- *************
+		<!-- App Footer start -->
+		<div class="app-footer">
+			<span>Copyright 2024. Bae Junghwan all rights reserved.</span>
+		</div>
+		<!-- App footer end -->
+
+	</div>
+	<!-- Main container end -->
+
+	</div>
+	<!-- Page wrapper end -->
+
+	<!-- *************
 			************ Required JavaScript Files *************
 		************* -->
-		<!-- Required jQuery first, then Bootstrap Bundle JS -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/bootstrap.bundle.min.js"></script>
-		<script src="assets/js/modernizr.js"></script>
-		<script src="assets/js/moment.js"></script>
+	<!-- Required jQuery first, then Bootstrap Bundle JS -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/bootstrap.bundle.min.js"></script>
+	<script src="assets/js/modernizr.js"></script>
+	<script src="assets/js/moment.js"></script>
 
-		<!-- *************
+	<!-- *************
 			************ Vendor Js Files *************
 		************* -->
 
-		<!-- Overlay Scroll JS -->
-		<script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
-		<script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
+	<!-- Overlay Scroll JS -->
+	<script src="assets/vendor/overlay-scroll/jquery.overlayScrollbars.min.js"></script>
+	<script src="assets/vendor/overlay-scroll/custom-scrollbar.js"></script>
 
-		<!-- News ticker -->
-		<script src="assets/vendor/newsticker/newsTicker.min.js"></script>
-		<script src="assets/vendor/newsticker/custom-newsTicker.js"></script>
+	<!-- News ticker -->
+	<script src="assets/vendor/newsticker/newsTicker.min.js"></script>
+	<script src="assets/vendor/newsticker/custom-newsTicker.js"></script>
 
-		<!-- Data Tables -->
-		<script src="assets/vendor/datatables/dataTables.min.js"></script>
-		<script src="assets/vendor/datatables/dataTables.bootstrap.min.js"></script>
-		<script src="assets/vendor/datatables/custom/custom-datatables.js"></script>
+	<!-- Data Tables -->
+	<script src="assets/vendor/datatables/dataTables.min.js"></script>
+	<script src="assets/vendor/datatables/dataTables.bootstrap.min.js"></script>
+	<script src="assets/vendor/datatables/custom/custom-datatables.js"></script>
 
-		<!-- Main Js Required -->
-		<script src="assets/js/main.js"></script>
-	</body>
+	<!-- Main Js Required -->
+	<script src="assets/js/main.js"></script>
+</body>
 
 </html>

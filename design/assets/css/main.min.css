@@ -155,9 +155,10 @@ p {
 .shade-white,.modal .modal-content {
     background:#fff !important
 }
-.shade-primary,.page-item.active .page-link {
+/* pagination 파란색 부분 */
+/* .shade-primary,.page-item.active .page-link {
     background:#245fae !important
-}
+} */
 .shade-secondary {
     background:#c8d0da !important
 }
@@ -2699,11 +2700,6 @@ button:focus:not(:focus-visible) {
     border-radius:5px;
     font-size:1rem
 }
-.form-label {   
-    display: inline-block;
-    color:#4a4c4d;
-    font-weight:600
-}
 .form-control {
     border:1px solid #c8d0da;
     color:#232629;
@@ -2721,23 +2717,7 @@ button:focus:not(:focus-visible) {
 .form-control:disabled {
     opacity:.7
 }
-.form-select {
-    border:1px solid #c8d0da;
-    color:#232629;
-    background-color:#fff
-}
-.form-select:hover {
-    border:1px solid #5d6a7c
-}
-.form-select:focus {
-    border-color:#5d6a7c;
-    box-shadow:none;
-    outline:auto !important;
-    outline-color:#5d6a7c !important
-}
-.form-select:disabled {
-    opacity:.7
-}
+
 .input-group-text {
     border:1px solid #c8d0da;
     background:#fff
@@ -2939,10 +2919,12 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
     border:1px solid #b7c6d8;
     color:#17181c
 }
-.page-item .page-link {
-    padding:.594rem 1.25rem;
-    font-size:.9rem
-}
+/* 애가 pagination 흰부분  */
+/* .page-item .page-link {
+    background-color: white; */
+    /* padding:.594rem 1.25rem; */
+    /* font-size:.9rem
+} */
 .page-item .page-link:hover {
     background-color:#e6f1ff
 }
@@ -2950,14 +2932,18 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
     box-shadow:none
 }
 .page-item.active .page-link {
-    border:1px solid #1553a3;
-    color:#fff
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border:1px solid #1553a3; 
+    color:#fff  
 }
-.page-link {
+/* 애가 pagination 흰부분  */
+/* .page-link {
     background-color:rgba(255,255,255,.0005);
     border:1px solid #b7c6d8;
     color:#17181c
-}
+} */
 .page-link:hover,.page-link:focus {
     background-color:rgba(0,0,0,.0005);
     border:1px solid 1px solid #b7c6d8;
@@ -3133,12 +3119,33 @@ input:-webkit-autofill,input:-webkit-autofill:hover,input:-webkit-autofill:focus
 .form-control-date {
     display: inline-block;
 }
-.inputs {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    /* grid-template-rows: repeat(2, 2fr); */
-    column-gap: 5px;
-    /* grid-template-areas: 
-    "main main main main main ."
-    "main main main mian mian main"; */
-}  
+.form-label {   
+    display: inline-block;
+    color:#4a4c4d;
+    font: weight 500px;
+}
+
+.form-select {
+    border:1px solid #c8d0da;
+    color:#232629;
+    background-color:#fff
+}
+.form-select:hover {
+    border:1px solid #5d6a7c
+}
+.form-select:focus {
+    border-color:#5d6a7c;
+    box-shadow:none;
+    outline:auto !important;
+    outline-color:#5d6a7c !important
+}
+.form-select:disabled {
+    opacity:.7
+}
+
+/* 버튼 모양 css 잡아줌  */
+.btn btn-outline-secondary {
+    border:1px solid #c8d0da;
+    color:#232629;
+    background-color:#fff
+}
