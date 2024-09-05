@@ -2389,8 +2389,8 @@ button:focus:not(:focus-visible) {
 }
 .btn-success3 {
     /* margin-left: auto; */
-    color:#fff;
-    background:#0000FF;
+    color:blue;
+    background:blue;
     border:1px solid #0000FF
 }
 /* .card-head {
